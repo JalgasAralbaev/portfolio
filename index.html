@@ -14,160 +14,135 @@
     />
 </head>
 <body>
-<!-- Logo and Results -->
-<div class="container">
-    <div class="logo">
-        <i class="fas fa-keyboard"></i> Клавиатурный тренажер
+<button>Keyboard</button>
+<div class="typingBox">
+    <div class="close"></div>
+    <!-- Logo and Results -->
+    <div class="container">
+
+
+        <!-- Results -->
+        <div class="results">
+            <div class="indicators">
+                <div class="indicator">
+                    <div class="indicator__icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="indicator__name">Символов в минуту:</div>
+                    <div class="indicator__value" id="symbolsPerMinute"></div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator__icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="indicator__name">Слов в минуту:</div>
+                    <div class="indicator__value">-</div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator__icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="indicator__name">Реальных слов в минуту:</div>
+                    <div class="indicator__value">-</div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator__icon indicator__icon--errors">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="indicator__name">Ошибок:</div>
+                    <div class="indicator__value" id="errorPercent"><span id="currentError">0</span>/<span id="errorAmount">15</span></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Results -->
-    <div class="results">
-        <div class="results-title">Результаты предыдущей строки:</div>
-        <div class="indicators">
-            <div class="indicator">
-                <div class="indicator__icon">
-                    <i class="fas fa-tachometer-alt"></i>
-                </div>
-                <div class="indicator__name">Символов в минуту:</div>
-                <div class="indicator__value" id="symbolsPerMinute">0</div>
-            </div>
-            <div class="indicator">
-                <div class="indicator__icon">
-                    <i class="far fa-clock"></i>
-                </div>
-                <div class="indicator__name">Слов в минуту:</div>
-                <div class="indicator__value">-</div>
-            </div>
-            <div class="indicator">
-                <div class="indicator__icon">
-                    <i class="far fa-clock"></i>
-                </div>
-                <div class="indicator__name">Реальных слов в минуту:</div>
-                <div class="indicator__value">-</div>
-            </div>
-            <div class="indicator">
-                <div class="indicator__icon indicator__icon--errors">
-                    <i class="fas fa-exclamation-circle"></i>
-                </div>
-                <div class="indicator__name">Ошибок:</div>
-                <div class="indicator__value" id="errorPercent">0%</div>
+
+    <div class="container">
+
+
+        <div class="break">
+            <div class="filter"></div>
+            <div class="timer"></div>
+            <div class="text" id="textExample">
+
             </div>
         </div>
+
+
+
+
+
+        <div class="keyboard">
+            <div class="row">
+                <div class="key finger1" data-key="ё">ё</div>
+                <div class="key finger1" data-key="1" data-sup="!">1<sup>!</sup></div>
+                <div class="key finger2" data-key="2" data-sup="&quot">2<sup>"</sup></div>
+                <div class="key finger3" data-key="3" data-sup="№">3<sup>№</sup></div>
+                <div class="key finger4" data-key="4" data-sup=";">4<sup>;</sup></div>
+                <div class="key finger4" data-key="5" data-sup="%">5<sup>%</sup></div>
+                <div class="key finger4" data-key="6" data-sup=":">6<sup>:</sup></div>
+                <div class="key finger7" data-key="7" data-sup="?">7<sup>?</sup></div>
+                <div class="key finger8" data-key="8" data-sup="*">8<sup>*</sup></div>
+                <div class="key finger9" data-key="9" data-sup="(">9<sup>(</sup></div>
+                <div class="key finger10" data-key="0" data-sup=")">0<sup>)</sup></div>
+                <div class="key finger10" data-key="-" data-sup="_">-<sup>_</sup></div>
+                <div class="key finger10" data-key="=" data-sup="+">=<sup>+</sup></div>
+                <div class="key system backspace" data-spec="backspace">Backspace</div>
+            </div>
+            <div class="row">
+                <div class="key system tab" data-spec="tab">Tab</div>
+                <div class="key finger1" data-key="й">й</div>
+                <div class="key finger2" data-key="Цц">ц</div>
+                <div class="key finger3" data-key="у">у</div>
+                <div class="key finger4" data-key="к">к</div>
+                <div class="key finger4" data-key="е">е</div>
+                <div class="key finger7" data-key="н">н</div>
+                <div class="key finger7" data-key="г">г</div>
+                <div class="key finger8" data-key="ш">ш</div>
+                <div class="key finger9" data-key="щ">щ</div>
+                <div class="key finger10" data-key="з">з</div>
+                <div class="key finger10" data-key="х">х</div>
+                <div class="key finger10" data-key="ъ">ъ</div>
+                <div class="key finger10" data-key="\" data-sup="/">\<sup>/</sup></div>
+            </div>
+            <div class="row">
+                <div class="key system caps" data-spec="capslock">Caps Lock</div>
+                <div class="key finger1" data-key="ф">ф</div>
+                <div class="key finger2" data-key="ы">ы</div>
+                <div class="key finger3" data-key="вВ">в</div>
+                <div class="key finger4" data-key="Аа">а</div>
+                <div class="key finger4" data-key="п">п</div>
+                <div class="key finger7" data-key="р">р</div>
+                <div class="key finger7" data-key="о">о</div>
+                <div class="key finger8" data-key="л">л</div>
+                <div class="key finger9" data-key="д">д</div>
+                <div class="key finger10" data-key="ж">ж</div>
+                <div class="key finger10" data-key="э">э</div>
+                <div class="key system enter" data-spec="enter">Enter</div>
+            </div>
+            <div class="row">
+                <div class="key finger1 system shift" data-spec="shiftleft">Shift</div>
+                <div class="key finger1" data-key="я">я</div>
+                <div class="key finger2" data-key="ч">ч</div>
+                <div class="key finger3" data-key="с">с</div>
+                <div class="key finger4" data-key="м">м</div>
+                <div class="key finger4" data-key="и">и</div>
+                <div class="key finger7" data-key="т">т</div>
+                <div class="key finger7" data-key="ь">ь</div>
+                <div class="key finger8" data-key="б">б</div>
+                <div class="key finger9" data-key="ю">ю</div>
+                <div class="key finger10" data-key="." data-sup=",">. <sup>,</sup></div>
+                <div class="key finger10 system shift" data-spec="shiftright">Shift</div>
+            </div>
+            <div class="row">
+                <div class="key system space finger5" data-spec="space"></div>
+            </div>
+        </div>
+        <!-- // Keyboard -->
     </div>
-    <!-- // Results -->
-</div>
-<!-- // Logo and Results -->
-
-
-
-<div class="container">
-    <!-- Input field -->
-    <form action="" hidden="">
-        <label for="input"></label><input
-            id="input"
-            type="text"
-            class="input unselectable"
-            placeholder="Поле для ввода текста"
-            value="На переднем плане, прямо перед"
-            autocomplete="off"
-    />
-    </form>
-
-
-    <div class="text" id="textExample">
-
-<!--        <div>-->
-<!--            <div class="line">-->
-<!--                <span class="done">На переднем плане, прямо перед</span>-->
-<!--                <span class="nextKey">н</span>ами, расположен был дворик, где стоял-->
-<!--            </div>-->
-<!--            <div class="line">-->
-<!--                наполовину вычищенный автомобиль. Шофер Остин был на этот раз-->
-<!--            </div>-->
-<!--            <div class="line">-->
-<!--                уволен окончательно и бесповоротно. Он раскинулся на земле,-->
-<!--            </div>-->
-<!--            <div class="line">-->
-<!--                и большая черная ссадина на лбу свидетельствовала, по-видимому, о том,-->
-<!--            </div>-->
-<!--            <div class="line">-->
-<!--                что он при падении ударился головою о подножку или щит.-->
-<!--            </div>-->
-<!--        </div>-->
-
-    </div>
-    <!-- // Text  -->
-
-    <!-- Keyboard -->
-    <div class="keyboard">
-        <div class="line">
-            <div class="finger1" id="letter_ё" data-key="Ёё">Ё <sup>~</sup></div>
-            <div class="finger1" id="letter_1" data-key="1">1 <sup>!</sup></div>
-            <div class="finger2" id="letter_2" data-key="2">2 <sup>"</sup></div>
-            <div class="finger3" id="letter_3" data-key="3">3 <sup>№</sup></div>
-            <div class="finger4" id="letter_4" data-key="4">4 <sup>;</sup></div>
-            <div class="finger4" id="letter_5" data-key="5">5 <sup>%</sup></div>
-            <div class="finger4" id="letter_6" data-key="6">6 <sup>:</sup></div>
-            <div class="finger7" id="letter_7" data-key="7">7 <sup>?</sup></div>
-            <div class="finger8" id="letter_8" data-key="8">8 <sup>*</sup></div>
-            <div class="finger9" id="letter_9" data-key="9">9 <sup>(</sup></div>
-            <div class="finger10" id="letter_0" data-key="0">0 <sup>)</sup></div>
-            <div class="finger10" id="letter_minus" data-key="-_">- <sup>_</sup></div>
-            <div class="finger10" id="letter_plus" data-key="+=">+ <sup>=</sup></div>
-            <div class="backspace" id="letter_backspace" data-spec="backspace">Backspace</div>
-        </div>
-        <div class="line">
-            <div class="tab" id="letter_tab" data-spec="tab">Tab</div>
-            <div class="finger1" id="letter_й fifth" data-key="Йй">Й</div>
-            <div class="finger2" id="letter_ц" data-key="Цц">Ц</div>
-            <div class="finger3" id="letter_у" data-key="Уу">У</div>
-            <div class="finger4" id="letter_к" data-key="Кк">К</div>
-            <div class="finger4" id="letter_е" data-key="Ее">Е</div>
-            <div class="finger7" id="letter_н" data-key="Нн">Н</div>
-            <div class="finger7" id="letter_г" data-key="Гг">Г</div>
-            <div class="finger8" id="letter_ш" data-key="Шш">Ш</div>
-            <div class="finger9" id="letter_щ" data-key="Щщ">Щ</div>
-            <div class="finger10" id="letter_з" data-key="Зз">З</div>
-            <div class="finger10" id="letter_х" data-key="Хх">Х</div>
-            <div class="finger10" id="letter_ъ" data-key="Ъъ">Ъ</div>
-            <div class="finger10" id="letter_slash" data-spec="backslash">\</div>
-        </div>
-        <div class="line">
-            <div class="caps" id="letter_capslock" data-spec="capslock">Caps Lock</div>
-            <div class="finger1" id="letter_ф" data-key="Фф">Ф</div>
-            <div class="finger2" id="letter_ы" data-key="Ыы">Ы</div>
-            <div class="finger3" id="letter_в" data-key="Вв">В</div>
-            <div class="finger4" id="letter_а" data-key="Аа">А</div>
-            <div class="finger4" id="letter_п" data-key="Пп">П</div>
-            <div class="finger7" id="letter_р" data-key="Рр">Р</div>
-            <div class="finger7" id="letter_о" data-key="Оо">О</div>
-            <div class="finger8" id="letter_л" data-key="Лл">Л</div>
-            <div class="finger9" id="letter_д" data-key="Дд">Д</div>
-            <div class="finger10" id="letter_ж" data-key="Жж">Ж</div>
-            <div class="finger10" id="letter_э" data-key="Ээ">Э</div>
-            <div class="enter" id="letter_enter" data-spec="enter">Enter</div>
-        </div>
-        <div class="line">
-            <div class="shift" data-spec="shiftleft">Shift</div>
-            <div class="finger1" id="letter_я" data-key="Яя">Я</div>
-            <div class="finger2" id="letter_ч" data-key="Чч">Ч</div>
-            <div class="finger3" id="letter_с" data-key="Сс">С</div>
-            <div class="finger4" id="letter_м" data-key="Мм">М</div>
-            <div class="finger4" id="letter_и" data-key="Ии">И</div>
-            <div class="finger7" id="letter_т" data-key="Тт">Т</div>
-            <div class="finger7" id="letter_ь" data-key="Ьь">Ь</div>
-            <div class="finger8" id="letter_б" data-key="Бб">Б</div>
-            <div class="finger9" id="letter_ю" data-key="Юю">Ю</div>
-            <div class="finger10" id="letter_dot" data-key=".,">. <sup>,</sup></div>
-            <div class="shift" data-spec="shiftright">Shift</div>
-        </div>
-        <div class="line">
-            <div class="space finger5" id="letter_space" data-spec="space"></div>
-        </div>
-    </div>
-    <!-- // Keyboard -->
 </div>
 
-<script src="src/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
